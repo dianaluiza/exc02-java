@@ -1,0 +1,57 @@
+package exerciciocurso;
+import java.util.Scanner;
+
+public class exc02 {
+
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.println("Responda às seguintes perguntas sobre o crime:");
+
+	        System.out.print("1. Você telefonou para a vítima? (sim/não): ");
+	        String resposta1 = scanner.nextLine().toLowerCase();
+
+	        System.out.print("2. Esteve no local do crime? (sim/não): ");
+	        String resposta2 = scanner.nextLine().toLowerCase();
+
+	        System.out.print("3. Mora perto da vítima? (sim/não): ");
+	        String resposta3 = scanner.nextLine().toLowerCase();
+
+	        System.out.print("4. Devia algo à vítima? (sim/não): ");
+	        String resposta4 = scanner.nextLine().toLowerCase();
+
+	        System.out.print("5. Já trabalhou com a vítima? (sim/não): ");
+	        String resposta5 = scanner.nextLine().toLowerCase();
+
+	        int contadorSim = 0;
+
+	        if (resposta1.equals("sim")) {
+	            contadorSim++;
+	        }
+	        if (resposta2.equals("sim")) {
+	            contadorSim++;
+	        }
+	        if (resposta3.equals("sim")) {
+	            contadorSim++;
+	        }
+	        if (resposta4.equals("sim")) {
+	            contadorSim++;
+	        }
+	        if (resposta5.equals("sim")) {
+	            contadorSim++;
+	        }
+
+	        if (contadorSim == 2) {
+	            System.out.println("Você é considerado(a) suspeito(a) do crime.");
+	        } else if (contadorSim >= 3 && contadorSim <= 4) {
+	            System.out.println("Você é considerado(a) cúmplice do crime.");
+	        } else if (contadorSim == 5) {
+	            System.out.println("Você é o(a) assassino(a)!");
+	        } else {
+	            System.out.println("Você é inocente.");
+	        }
+
+	        
+	    }
+
+}
